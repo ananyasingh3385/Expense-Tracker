@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>💸 Expense Tracker</h1>
+
+    <div class="summary">
+      <div class="card income-card">
+        <h3>Total Income</h3>
+        <p id="income">₹0</p>
+      </div>
+      <div class="card expense-card">
+        <h3>Total Expense</h3>
+        <p id="expense">₹0</p>
+      </div>
+    </div>
+
+    <form id="transaction-form" class="form">
+      <input type="text" id="text" placeholder="Description" required>
+      <input type="number" id="amount" placeholder="Amount (+ for income, - for expense)" required>
+      <button type="submit">Add Transaction</button>
+    </form>
+
+    <ul id="transactions" class="transactions"></ul>
+
+    <div class="dashboard">
+      <div class="card income-left-card">
+        <h3>Income Left</h3>
+        <p id="income-left">₹0</p>
+      </div>
+
+      <div class="card goal-card">
+        <h3>Monthly Goal</h3>
+        <input type="number" id="goal-input" placeholder="Set goal ₹" />
+        <p>Spent: ₹<span id="goal-spent">0</span> / ₹<span id="goal-total">0</span></p>
+        <div class="progress-bar">
+          <div id="goal-progress" class="progress"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
